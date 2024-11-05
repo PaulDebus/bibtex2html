@@ -1,6 +1,5 @@
 from collections import defaultdict
 import bibtexparser
-from datetime import datetime
 import re
 import argparse
 
@@ -139,6 +138,7 @@ HTML_TEMPLATE_END = '''
 </html>
 '''
 
+
 def latex_to_unicode(text):
     """Convert LaTeX special characters to Unicode."""
     replacements = {
@@ -187,58 +187,62 @@ def latex_to_unicode(text):
         r'\{': '{',
         r'\}': '}',
     }
-    
+
     for latex, unicode in replacements.items():
         text = text.replace(latex, unicode)
-    
+
     # Remove any remaining curly braces
     text = re.sub(r'{([^{}]*)}', r'\1', text)
-    
+
     return text
+
 
 def format_authors(authors_str, highlight_name="Debus"):
     """Format authors list and highlight specific author."""
     # Convert LaTeX special characters before processing
     authors_str = latex_to_unicode(authors_str)
-    
+
     authors = [author.strip() for author in authors_str.split(" and ")]
     formatted_authors = []
-    
+
     for author in authors:
         if highlight_name in author:
-            formatted_authors.append(f'<span class="author-highlight">{author}</span>')
+            formatted_authors.append(
+                f'<span class="author-highlight">{author}</span>')
         else:
             formatted_authors.append(author)
-    
+
     if len(formatted_authors) > 1:
         return ", ".join(formatted_authors[:-1]) + ", & " + formatted_authors[-1]
     return formatted_authors[0]
 
+
 def format_venue_info(entry):
     """Format publication venue information."""
     venue_info = []
-    
+
     if entry.get('journal'):
         venue_info.append(latex_to_unicode(entry['journal']))
     elif entry.get('booktitle'):
         venue_info.append(f"In {latex_to_unicode(entry['booktitle'])}")
-    
+
     if entry.get('volume'):
         venue_info.append(f"{entry['volume']}")
-    
+
     if entry.get('number'):
         venue_info.append(f"({entry['number']})")
-    
+
     if entry.get('pages'):
         venue_info.append(f"{entry['pages'].replace('--', '–')}")
-    
+
     if entry.get('year'):
         venue_info.append(f"({entry['year']})")
-    
+
     if entry.get('publisher'):
         venue_info.append(latex_to_unicode(entry['publisher']))
-    
+
     return ", ".join(venue_info)
+
 
 def parse_args():
     """Parse command line arguments."""
@@ -252,32 +256,31 @@ Examples:
   %(prog)s --no-profile --input publications.bib
         '''
     )
-    
-    parser.add_argument('-i', '--input', 
+
+    parser.add_argument('-i', '--input',
                         default='publications.bib',
                         help='Input BibTeX file (default: publications.bib)')
-    
+
     parser.add_argument('-o', '--output',
                         default='publications.html',
                         help='Output HTML file (default: publications.html)')
-    
+
     parser.add_argument('--highlight',
                         default='Debus',
                         help='Author name to highlight (default: Debus)')
-    
+
     parser.add_argument('--no-profile',
                         action='store_true',
                         help='Exclude the profile section from the output')
-    
+
     return parser.parse_args()
 
-def generate_html(*, input_file='publications.bib', 
-                 output_file='publications.html',
-                 highlight_name='Debus',
-                 include_profile=True):
+
+def generate_html(input_file='publications.bib', output_file='publications.html',
+                  highlight_name='Debus', include_profile=True):
     """
     Generate HTML file from BibTeX entries.
-    
+
     Args:
         input_file (str): Path to input BibTeX file
         output_file (str): Path to output HTML file
@@ -293,30 +296,33 @@ def generate_html(*, input_file='publications.bib',
     except Exception as e:
         print(f"Error reading BibTeX file: {e}")
         return
-    
+
     # Group by year
     years = defaultdict(list)
     for entry in bib_database.entries:
         year = entry.get('year', '').value if entry.get('year') else ''
         if year:  # Only include entries with a year
             years[year].append(entry)
-    
+
     # Generate HTML
     html_content = []
-    
+
     # Add the template start, optionally excluding profile section
     if not include_profile:
         # Remove profile section from template
-        template_parts = HTML_TEMPLATE_START.split('<div class="profile-section">')
+        template_parts = HTML_TEMPLATE_START.split(
+            '<div class="profile-section">')
         profile_end = template_parts[1].find('</div>') + 6
-        html_content.append(template_parts[0] + template_parts[1][profile_end:])
+        html_content.append(
+            template_parts[0] + template_parts[1][profile_end:])
     else:
         html_content.append(HTML_TEMPLATE_START)
-    
+
     # Add publications by year
     for year in sorted(years.keys(), reverse=True):
-        html_content.append(f'    <div class="year-section">\n        <h2 class="year-heading">{year}</h2>')
-        
+        html_content.append(
+            f'    <div class="year-section">\n        <h2 class="year-heading">{year}</h2>')
+
         for entry in years[year]:
             html_content.append('''        <div class="publication">
             <p class="publication-title">{title}</p>
@@ -333,11 +339,11 @@ def generate_html(*, input_file='publications.bib',
                 venue=format_venue_info(entry),
                 bibtex=entry.raw
             ))
-        
+
         html_content.append('    </div>')
-    
+
     html_content.append(HTML_TEMPLATE_END)
-    
+
     # Write to file
     try:
         with open(output_file, 'w', encoding='utf-8') as f:
@@ -346,6 +352,7 @@ def generate_html(*, input_file='publications.bib',
     except Exception as e:
         print(f"Error writing output file: {e}")
 
+
 if __name__ == "__main__":
     args = parse_args()
     generate_html(
@@ -353,4 +360,4 @@ if __name__ == "__main__":
         output_file=args.output,
         highlight_name=args.highlight,
         include_profile=not args.no_profile
-    ) 
+    )
