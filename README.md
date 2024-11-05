@@ -2,6 +2,8 @@
 
 A Python script to generate a static HTML publications page from BibTeX data with copy-to-clipboard functionality for citations.
 
+This tool was created mostly by Cursor as an experiment.
+
 ## Features
 
 - Generates a HTML page from BibTeX entries
