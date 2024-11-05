@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .publication {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        .year-section {
+            margin-top: 30px;
+        }
+        .year-heading {
+            color: #333;
+            border-bottom: 2px solid #333;
+            margin-bottom: 20px;
+        }
+        .copy-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .copy-button:hover {
+            background-color: #45a049;
+        }
+        .hidden-bibtex {
+            display: none;
+        }
+        .profile-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+        .profile-links {
+            margin-top: 10px;
+        }
+        .profile-links a {
+            margin-right: 15px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .profile-links a:hover {
+            text-decoration: underline;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        .download-button {
+            background-color: #2196F3;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .download-button:hover {
+            background-color: #1976D2;
+        }
+        .download-button.disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        .author-highlight {
+            font-weight: bold;
+            color: #2196F3;
+        }
+        .publication-title {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        .publication-authors {
+            margin-bottom: 5px;
+        }
+        .publication-info {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-section">
+        <h1>Paul Debus</h1>
+        <div class="profile-links">
+            <a href="https://www.researchgate.net/profile/Paul-Debus" target="_blank">ResearchGate</a>
+            <a href="https://scholar.google.com/citations?user=yh2m7bUAAAAJ&hl=en" target="_blank">Google Scholar</a>
+            <a href="https://orcid.org/0000-0001-6228-588X" target="_blank">ORCID: 0000-0001-6228-588X</a>
+        </div>
+    </div>
+
+    <div class="year-section">
+        <h2 class="year-heading">2024</h2>
+        <div class="publication">
+            <p class="publication-title">UAS Flight Path Planning: A Comparative Analysis of Diverse Use Cases and Approaches</p>
+            <p class="publication-authors"><span class="author-highlight">Debus, Paul</span>, & Rodehorst, Volker</p>
+            <p class="publication-info">ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, 10, 111–118, (2024), Copernicus GmbH</p>
+            <div class="button-group">
+                <button class="copy-button" onclick="copyBibtex(this)">Copy BibTeX</button>
+                <button class="download-button disabled" onclick="alert('PDF not available yet')">Access PDF</button>
+            </div>
+            <div class="hidden-bibtex">@article{debus2024uas,
+  title={UAS Flight Path Planning: A Comparative Analysis of Diverse Use Cases and Approaches},
+  author={Debus, Paul and Rodehorst, Volker},
+  journal={ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences},
+  volume={10},
+  pages={111--118},
+  year={2024},
+  publisher={Copernicus GmbH}
+}</div>
+        </div>
+        <div class="publication">
+            <p class="publication-title">Enhancing Information Requirement Compliance Through Automated Integration in a Modelling Environment</p>
+            <p class="publication-authors">Filardo, Martina Mellenthin, <span class="author-highlight">Debus, Paul</span>, Melzner, Jürgen, & Bargstädt, Hans-Joachim</p>
+            <p class="publication-info">(2024)</p>
+            <div class="button-group">
+                <button class="copy-button" onclick="copyBibtex(this)">Copy BibTeX</button>
+                <button class="download-button disabled" onclick="alert('PDF not available yet')">Access PDF</button>
+            </div>
+            <div class="hidden-bibtex">@article{filardoenhancing,
+  title={Enhancing Information Requirement Compliance Through Automated Integration in a Modelling Environment},
+  author={Filardo, Martina Mellenthin and Debus, Paul and Melzner, J{\"u}rgen and Bargst{\"a}dt, Hans-Joachim},
+  year={2024}
+}</div>
+        </div>
+    </div>
+    <div class="year-section">
+        <h2 class="year-heading">2023</h2>
+        <div class="publication">
+            <p class="publication-title">Potential-Guided UAV-Flight Path Planning for the Inspection of Complex Structures</p>
+            <p class="publication-authors"><span class="author-highlight">Debus, P</span>, & Rodehorst, V</p>
+            <p class="publication-info">The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, 48, 291–298, (2023), Copernicus GmbH</p>
+            <div class="button-group">
+                <button class="copy-button" onclick="copyBibtex(this)">Copy BibTeX</button>
+                <button class="download-button disabled" onclick="alert('PDF not available yet')">Access PDF</button>
+            </div>
+            <div class="hidden-bibtex">@article{debus2023potential,
+  title={Potential-Guided UAV-Flight Path Planning for the Inspection of Complex Structures},
+  author={Debus, P and Rodehorst, V},
+  journal={The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences},
+  volume={48},
+  pages={291--298},
+  year={2023},
+  publisher={Copernicus GmbH}
+}</div>
+        </div>
+    </div>
+    <div class="year-section">
+        <h2 class="year-heading">2022</h2>
+        <div class="publication">
+            <p class="publication-title">Bewertung alternder Infrastrukturbauwerke mit digitalen Technologien, Teilvorhaben: Digitale Methoden zur Sicherheitsbewertung von Bauwerken: Abschlussbericht zur Bekanntmachung Zivile Sicherheit-Verkehrsinfrastrukturen: Projektlaufzeit: 01.09. 2018-31.12. 2021</p>
+            <p class="publication-authors">Morgenthal, Guido, Rodehorst, Volker, Fröhlich, Bernd, Hallermann, Norman, Helmrich, Marcel, <span class="author-highlight">Debus, Paul</span>, Benz, Christian, Gebhardt, Thomas, Beck, Stephan, & Kreskowski, Adrian</p>
+            <p class="publication-info">(2022), Bauhaus-Universität Weimar</p>
+            <div class="button-group">
+                <button class="copy-button" onclick="copyBibtex(this)">Copy BibTeX</button>
+                <button class="download-button disabled" onclick="alert('PDF not available yet')">Access PDF</button>
+            </div>
+            <div class="hidden-bibtex">@misc{morgenthal2022bewertung,
+  title={Bewertung alternder Infrastrukturbauwerke mit digitalen Technologien, Teilvorhaben: Digitale Methoden zur Sicherheitsbewertung von Bauwerken: Abschlussbericht zur Bekanntmachung Zivile Sicherheit-Verkehrsinfrastrukturen: Projektlaufzeit: 01.09. 2018-31.12. 2021},
+  author={Morgenthal, Guido and Rodehorst, Volker and Fr{\"o}hlich, Bernd and Hallermann, Norman and Helmrich, Marcel and Debus, Paul and Benz, Christian and Gebhardt, Thomas and Beck, Stephan and Kreskowski, Adrian},
+  year={2022},
+  publisher={Bauhaus-Universit{\"a}t Weimar}
+}</div>
+        </div>
+    </div>
+    <div class="year-section">
+        <h2 class="year-heading">2021</h2>
+        <div class="publication">
+            <p class="publication-title">Multi-scale flight path planning for UAS building inspection</p>
+            <p class="publication-authors"><span class="author-highlight">Debus, Paul</span>, & Rodehorst, Volker</p>
+            <p class="publication-info">In Proceedings of the 18th International Conference on Computing in Civil and Building Engineering: ICCCBE 2020, 1069–1085, (2021)</p>
+            <div class="button-group">
+                <button class="copy-button" onclick="copyBibtex(this)">Copy BibTeX</button>
+                <button class="download-button disabled" onclick="alert('PDF not available yet')">Access PDF</button>
+            </div>
+            <div class="hidden-bibtex">@inproceedings{debus2021multi,
+  title={Multi-scale flight path planning for UAS building inspection},
+  author={Debus, Paul and Rodehorst, Volker},
+  booktitle={Proceedings of the 18th International Conference on Computing in Civil and Building Engineering: ICCCBE 2020},
+  pages={1069--1085},
+  year={2021},
+  organization={Springer International Publishing}
+}</div>
+        </div>
+        <div class="publication">
+            <p class="publication-title">Evaluation of 3D UAS flight path planning algorithms</p>
+            <p class="publication-authors"><span class="author-highlight">Debus, Paul</span>, & Rodehorst, Volker</p>
+            <p class="publication-info">The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, 43, 157–164, (2021), Copernicus GmbH</p>
+            <div class="button-group">
+                <button class="copy-button" onclick="copyBibtex(this)">Copy BibTeX</button>
+                <button class="download-button disabled" onclick="alert('PDF not available yet')">Access PDF</button>
+            </div>
+            <div class="hidden-bibtex">@article{debus2021evaluation,
+  title={Evaluation of 3D UAS flight path planning algorithms},
+  author={Debus, Paul and Rodehorst, Volker},
+  journal={The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences},
+  volume={43},
+  pages={157--164},
+  year={2021},
+  publisher={Copernicus GmbH}
+}</div>
+        </div>
+        <div class="publication">
+            <p class="publication-title">Framework for a UAS-based assessment of energy performance of buildings</p>
+            <p class="publication-authors">Benz, Alexander, Taraben, Jakob, <span class="author-highlight">Debus, Paul</span>, Habte, Bedilu, Oppermann, Luise, Hallermann, Norman, Voelker, Conrad, Rodehorst, Volker, & Morgenthal, Guido</p>
+            <p class="publication-info">Energy and Buildings, 250, 111266, (2021), Elsevier</p>
+            <div class="button-group">
+                <button class="copy-button" onclick="copyBibtex(this)">Copy BibTeX</button>
+                <button class="download-button disabled" onclick="alert('PDF not available yet')">Access PDF</button>
+            </div>
+            <div class="hidden-bibtex">@article{benz2021framework,
+  title={Framework for a UAS-based assessment of energy performance of buildings},
+  author={Benz, Alexander and Taraben, Jakob and Debus, Paul and Habte, Bedilu and Oppermann, Luise and Hallermann, Norman and Voelker, Conrad and Rodehorst, Volker and Morgenthal, Guido},
+  journal={Energy and Buildings},
+  volume={250},
+  pages={111266},
+  year={2021},
+  publisher={Elsevier}
+}</div>
+        </div>
+        <div class="publication">
+            <p class="publication-title">Bauwerksprüfung gemäß DIN 1076–Unterstützung durch (halb-) automatisierte Bildauswertung durch UAV (Unmanned Aerial Vehicles–Unbemannte Fluggeräte)</p>
+            <p class="publication-authors">Morgenthal, Guido, Rodehorst, Volker, Hallermann, Norman, <span class="author-highlight">Debus, Paul</span>, & Benz, Christian</p>
+            <p class="publication-info">(2021)</p>
+            <div class="button-group">
+                <button class="copy-button" onclick="copyBibtex(this)">Copy BibTeX</button>
+                <button class="download-button disabled" onclick="alert('PDF not available yet')">Access PDF</button>
+            </div>
+            <div class="hidden-bibtex">@article{morgenthal2021bauwerksprufung,
+  title={Bauwerkspr{\"u}fung gem{\"a}{\ss} DIN 1076--Unterst{\"u}tzung durch (halb-) automatisierte Bildauswertung durch UAV (Unmanned Aerial Vehicles--Unbemannte Flugger{\"a}te)},
+  author={Morgenthal, Guido and Rodehorst, Volker and Hallermann, Norman and Debus, Paul and Benz, Christian},
+  year={2021}
+}</div>
+        </div>
+        <div class="publication">
+            <p class="publication-title">Drohnen im Bauwesen: Wissen zu Einsatz, Technik und BIM</p>
+            <p class="publication-authors"><span class="author-highlight">Debus, Paul</span>, & Filardo, Martina Mellenthin</p>
+            <p class="publication-info">(2021), bSD Verlag</p>
+            <div class="button-group">
+                <button class="copy-button" onclick="copyBibtex(this)">Copy BibTeX</button>
+                <button class="download-button disabled" onclick="alert('PDF not available yet')">Access PDF</button>
+            </div>
+            <div class="hidden-bibtex">@misc{debus2021drohnen,
+  title={Drohnen im Bauwesen: Wissen zu Einsatz, Technik und BIM},
+  author={Debus, Paul and Filardo, Martina Mellenthin},
+  year={2021},
+  publisher={bSD Verlag}
+}</div>
+        </div>
+    </div>
+    <div class="year-section">
+        <h2 class="year-heading">2020</h2>
+        <div class="publication">
+            <p class="publication-title">Path Planning Challenge-Evaluation and Comparison of UAS-Flight Path Planning Algorithms for the Inspection of Infrastructures</p>
+            <p class="publication-authors"><span class="author-highlight">Debus, Paul</span>, & Satpute, Ankit</p>
+            <p class="publication-info">(2020)</p>
+            <div class="button-group">
+                <button class="copy-button" onclick="copyBibtex(this)">Copy BibTeX</button>
+                <button class="download-button disabled" onclick="alert('PDF not available yet')">Access PDF</button>
+            </div>
+            <div class="hidden-bibtex">@article{debuspath,
+  title={Path Planning Challenge-Evaluation and Comparison of UAS-Flight Path Planning Algorithms for the Inspection of Infrastructures},
+  author={Debus, Paul and Satpute, Ankit},
+  year={2020}
+}</div>
+        </div>
+    </div>
+    <div class="year-section">
+        <h2 class="year-heading">2019</h2>
+        <div class="publication">
+            <p class="publication-title">Framework for automated UAS-based structural condition assessment of bridges</p>
+            <p class="publication-authors">Morgenthal, Guido, Hallermann, Norman, Kersten, Jens, Taraben, Jakob, <span class="author-highlight">Debus, Paul</span>, Helmrich, Marcel, & Rodehorst, Volker</p>
+            <p class="publication-info">Automation in Construction, 97, 77–95, (2019), Elsevier</p>
+            <div class="button-group">
+                <button class="copy-button" onclick="copyBibtex(this)">Copy BibTeX</button>
+                <button class="download-button disabled" onclick="alert('PDF not available yet')">Access PDF</button>
+            </div>
+            <div class="hidden-bibtex">@article{morgenthal2019framework,
+  title={Framework for automated UAS-based structural condition assessment of bridges},
+  author={Morgenthal, Guido and Hallermann, Norman and Kersten, Jens and Taraben, Jakob and Debus, Paul and Helmrich, Marcel and Rodehorst, Volker},
+  journal={Automation in Construction},
+  volume={97},
+  pages={77--95},
+  year={2019},
+  publisher={Elsevier}
+}</div>
+        </div>
+        <div class="publication">
+            <p class="publication-title">Verbesserung der Risserkennung in UAS Bildern durch Fusion mehrerer Aufnahmen</p>
+            <p class="publication-authors"><span class="author-highlight">Debus, Paul</span>, & Benz, Christian</p>
+            <p class="publication-info">In 31. Forum Bauinformatik, 257, (2019)</p>
+            <div class="button-group">
+                <button class="copy-button" onclick="copyBibtex(this)">Copy BibTeX</button>
+                <button class="download-button disabled" onclick="alert('PDF not available yet')">Access PDF</button>
+            </div>
+            <div class="hidden-bibtex">@inproceedings{debus2019verbesserung,
+  title={Verbesserung der Risserkennung in UAS Bildern durch Fusion mehrerer Aufnahmen},
+  author={Debus, Paul and Benz, Christian},
+  booktitle={31. Forum Bauinformatik},
+  pages={257},
+  year={2019}
+}</div>
+        </div>
+        <div class="publication">
+            <p class="publication-title">Multiple view anomaly detection in images from UAS structure inspection using CNNs</p>
+            <p class="publication-authors"><span class="author-highlight">Debus, Paul</span>, Benz, Christian, & Rodehorst, Volker</p>
+            <p class="publication-info">In 2019 IABSE Congress-The Evolving Metropolis, New York City, United States, 1985–92, (2019)</p>
+            <div class="button-group">
+                <button class="copy-button" onclick="copyBibtex(this)">Copy BibTeX</button>
+                <button class="download-button disabled" onclick="alert('PDF not available yet')">Access PDF</button>
+            </div>
+            <div class="hidden-bibtex">@inproceedings{debus2019multiple,
+  title={Multiple view anomaly detection in images from UAS structure inspection using CNNs},
+  author={Debus, Paul and Benz, Christian and Rodehorst, Volker},
+  booktitle={2019 IABSE Congress-The Evolving Metropolis, New York City, United States},
+  pages={1985--92},
+  year={2019}
+}</div>
+        </div>
+        <div class="publication">
+            <p class="publication-title">Comparison of 3D point cloud quality based on image data acquired with various UAV-and camera systems from low cost to professional</p>
+            <p class="publication-authors">Thiel, Christian, Kersten, Jens, Hese, Sören, Truckenbrodt, Sina, Kunz, Martin, <span class="author-highlight">Debus, Paul</span>, Rodehorst, Volker, Hallermann, Norman, Eckardt, Robert, & Gräf, Andre</p>
+            <p class="publication-info">(2019)</p>
+            <div class="button-group">
+                <button class="copy-button" onclick="copyBibtex(this)">Copy BibTeX</button>
+                <button class="download-button disabled" onclick="alert('PDF not available yet')">Access PDF</button>
+            </div>
+            <div class="hidden-bibtex">@article{thiel2019comparison,
+  title={Comparison of 3D point cloud quality based on image data acquired with various UAV-and camera systems from low cost to professional},
+  author={Thiel, Christian and Kersten, Jens and Hese, S{\"o}ren and Truckenbrodt, Sina and Kunz, Martin and Debus, Paul and Rodehorst, Volker and Hallermann, Norman and Eckardt, Robert and Gr{\"a}f, Andre},
+  year={2019}
+}</div>
+        </div>
+        <div class="publication">
+            <p class="publication-title">Towards specifying and optimizing 3D point cloud quality based on UAV-borne image data acquired by citizen scientists</p>
+            <p class="publication-authors">Thiel, Christian, Kersten, Jens, Hese, Sören, Truckenbrodt, Sina, Kunz, Martin, <span class="author-highlight">Debus, Paul</span>, Rodehorst, Volker, Hallermann, Norman, Eckardt, Robert, Gräf, Andre, & others</p>
+            <p class="publication-info">(2019)</p>
+            <div class="button-group">
+                <button class="copy-button" onclick="copyBibtex(this)">Copy BibTeX</button>
+                <button class="download-button disabled" onclick="alert('PDF not available yet')">Access PDF</button>
+            </div>
+            <div class="hidden-bibtex">@article{thiel2019towards,
+  title={Towards specifying and optimizing 3D point cloud quality based on UAV-borne image data acquired by citizen scientists},
+  author={Thiel, Christian and Kersten, Jens and Hese, S{\"o}ren and Truckenbrodt, Sina and Kunz, Martin and Debus, Paul and Rodehorst, Volker and Hallermann, Norman and Eckardt, Robert and Gr{\"a}f, Andre and others},
+  year={2019}
+}</div>
+        </div>
+        <div class="publication">
+            <p class="publication-title">Crack segmentation on UAS-based imagery using transfer learning</p>
+            <p class="publication-authors">Benz, Christian, <span class="author-highlight">Debus, Paul</span>, Ha, Huy Khanh, & Rodehorst, Volker</p>
+            <p class="publication-info">In 2019 International Conference on Image and Vision Computing New Zealand (IVCNZ), 1–6, (2019)</p>
+            <div class="button-group">
+                <button class="copy-button" onclick="copyBibtex(this)">Copy BibTeX</button>
+                <button class="download-button disabled" onclick="alert('PDF not available yet')">Access PDF</button>
+            </div>
+            <div class="hidden-bibtex">@inproceedings{benz2019crack,
+  title={Crack segmentation on UAS-based imagery using transfer learning},
+  author={Benz, Christian and Debus, Paul and Ha, Huy Khanh and Rodehorst, Volker},
+  booktitle={2019 International Conference on Image and Vision Computing New Zealand (IVCNZ)},
+  pages={1--6},
+  year={2019},
+  organization={IEEE}
+}</div>
+        </div>
+        <div class="publication">
+            <p class="publication-title">Unbemannte Fluggeräte zur Zustandsermittlung von Bauwerken-Fortsetzungsantrag</p>
+            <p class="publication-authors">Hallermann, Norman, <span class="author-highlight">Debus, Paul</span>, Taraben, Jakob, Benz, Alexander, Morgenthal, Guido, Rodehorst, Volker, Völker, Conrad, Abbas, Tajammal, Gebhardt, Thomas, & Daubert, Sven</p>
+            <p class="publication-info">(2019), Fraunhofer IRB Verlag</p>
+            <div class="button-group">
+                <button class="copy-button" onclick="copyBibtex(this)">Copy BibTeX</button>
+                <button class="download-button disabled" onclick="alert('PDF not available yet')">Access PDF</button>
+            </div>
+            <div class="hidden-bibtex">@misc{hallermann2019unbemannte,
+  title={Unbemannte Flugger{\"a}te zur Zustandsermittlung von Bauwerken-Fortsetzungsantrag},
+  author={Hallermann, Norman and Debus, Paul and Taraben, Jakob and Benz, Alexander and Morgenthal, Guido and Rodehorst, Volker and V{\"o}lker, Conrad and Abbas, Tajammal and Gebhardt, Thomas and Daubert, Sven},
+  year={2019},
+  publisher={Fraunhofer IRB Verlag}
+}</div>
+        </div>
+    </div>
+    <div class="year-section">
+        <h2 class="year-heading">2018</h2>
+        <div class="publication">
+            <p class="publication-title">UAS-based diagnostics of infrastructure structures-Part of a digital maintenance strategy</p>
+            <p class="publication-authors">Hallermann, Norman, Helmrich, Marcel, Morgenthal, Guido, Schnitzler, Elke, Rodehorst, Volker, & <span class="author-highlight">Debus, Paul</span></p>
+            <p class="publication-info">Bautechnik, 95, (10), 720–+, (2018), ERNST & SOHN ROTHERSTRASSE 21, BERLIN, DEUTSCHLAND 10245, GERMANY</p>
+            <div class="button-group">
+                <button class="copy-button" onclick="copyBibtex(this)">Copy BibTeX</button>
+                <button class="download-button disabled" onclick="alert('PDF not available yet')">Access PDF</button>
+            </div>
+            <div class="hidden-bibtex">@article{hallermann2018uas,
+  title={UAS-based diagnostics of infrastructure structures-Part of a digital maintenance strategy},
+  author={Hallermann, Norman and Helmrich, Marcel and Morgenthal, Guido and Schnitzler, Elke and Rodehorst, Volker and Debus, Paul},
+  journal={Bautechnik},
+  volume={95},
+  number={10},
+  pages={720--+},
+  year={2018},
+  publisher={ERNST \& SOHN ROTHERSTRASSE 21, BERLIN, DEUTSCHLAND 10245, GERMANY}
+}</div>
+        </div>
+        <div class="publication">
+            <p class="publication-title">Potentials of autonomous UAS and automated image analysis for structural health monitoring</p>
+            <p class="publication-authors">Kersten, Jens, Rodehorst, Volker, Hallermann, Norman, <span class="author-highlight">Debus, Paul</span>, & Morgenthal, Guido</p>
+            <p class="publication-info">In Proceedings of the 40th IABSE Symposium, Nantes, France, 19–21, (2018)</p>
+            <div class="button-group">
+                <button class="copy-button" onclick="copyBibtex(this)">Copy BibTeX</button>
+                <button class="download-button disabled" onclick="alert('PDF not available yet')">Access PDF</button>
+            </div>
+            <div class="hidden-bibtex">@inproceedings{kersten2018potentials,
+  title={Potentials of autonomous UAS and automated image analysis for structural health monitoring},
+  author={Kersten, Jens and Rodehorst, Volker and Hallermann, Norman and Debus, Paul and Morgenthal, Guido},
+  booktitle={Proceedings of the 40th IABSE Symposium, Nantes, France},
+  pages={19--21},
+  year={2018}
+}</div>
+        </div>
+        <div class="publication">
+            <p class="publication-title">Approach for the IFC based integration of life cycle data and processes in building information models</p>
+            <p class="publication-authors">Taraben, Jakob, Brust, P, <span class="author-highlight">Debus, P</span>, Morgenthal, G, & Tauscher, E</p>
+            <p class="publication-info">In 17th International Conference on Computing in Civil and Building Engineering, 944–950, (2018)</p>
+            <div class="button-group">
+                <button class="copy-button" onclick="copyBibtex(this)">Copy BibTeX</button>
+                <button class="download-button disabled" onclick="alert('PDF not available yet')">Access PDF</button>
+            </div>
+            <div class="hidden-bibtex">@inproceedings{taraben2018approach,
+  title={Approach for the IFC based integration of life cycle data and processes in building information models},
+  author={Taraben, Jakob and Brust, P and Debus, P and Morgenthal, G and Tauscher, E},
+  booktitle={17th International Conference on Computing in Civil and Building Engineering},
+  pages={944--950},
+  year={2018},
+  organization={Tampere Finland}
+}</div>
+        </div>
+    </div>
+
+    <script>
+        async function copyBibtex(button) {
+            const bibtex = button.parentElement.nextElementSibling.textContent;
+            try {
+                await navigator.clipboard.writeText(bibtex);
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+            }
+        }
+    </script>
+</body>
+</html>
