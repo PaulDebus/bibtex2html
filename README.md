@@ -15,8 +15,10 @@ This tool was created mostly by Cursor as an experiment.
 
 ## Requirements
 
+Currently, the script requires the development version of `bibtexparser`, since the currently released version is about to be deprecated.
+
 ```bash
-pip install bibtexparser
+pip install --pre bibtexparser
 ```
 
 ## Usage
